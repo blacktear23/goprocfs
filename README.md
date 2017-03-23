@@ -45,7 +45,7 @@ umount 文件系统
 
 ## 例子
 
-```
+```go
 import (
     "log"
     "time"
