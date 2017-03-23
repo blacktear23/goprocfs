@@ -83,7 +83,7 @@ func (fs *ProcFS) RegisterReadOnlyFile(name string, mode uint32, onRead ReadCall
 	return fs.RegisterFile(name, mode, onRead, nil)
 }
 
-func (fs *ProcFS) PrepareMount(mountPoint string, opts []string) error {
+func (fs *ProcFS) Mount(mountPoint string, opts []string) error {
 	nfs := pathfs.NewPathNodeFs(fs, nil)
 	fsopts := nodefs.NewOptions()
 	fsopts.EntryTimeout = 1 * time.Second

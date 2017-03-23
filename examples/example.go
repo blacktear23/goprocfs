@@ -34,11 +34,10 @@ func main() {
 			fmt.Println("readwrite file OnWrite")
 			fmt.Println(buf)
 			Data = string(buf)
-			return
 		},
 	)
 
-	err := pfs.PrepareMount("/tmp/dumps", nil)
+	err := pfs.Mount("/tmp/dumps", nil)
 	if err != nil {
 		log.Fatal(err)
 	}
